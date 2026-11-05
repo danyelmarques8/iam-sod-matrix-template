@@ -10,29 +10,31 @@ Modelo de matriz de Segregação de Funções (SoD) em planilha, com **dados, es
 
 17 funções em 4 processos (compras e pagamentos, folha, contabilidade e TI) e 28 regras.
 
-| |F01|F02|F03|F04|F05|F06|F07|F08|F09|F10|F11|F12|F13|F14|F15|F16|F17|
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| **F01** |·|🟧|||🟧|🟥|🟥|||||||||||
-| **F02** |🟧|·|🟥|🟧||||||||||||||
-| **F03** ||🟥|·||🟨|||||||||||||
-| **F04** ||🟧||·|🟨|||||||||||||
-| **F05** |🟧||🟨|🟨|·|🟥|🟧||||||🟧|||||
-| **F06** |🟥||||🟥|·|🟥||||||🟧||||🟧|
-| **F07** |🟥||||🟧|🟥|·|🟧|||🟧|||||🟧||
-| **F08** |||||||🟧|·|🟧|🟧||||||||
-| **F09** ||||||||🟧|·|🟥||||||||
-| **F10** ||||||||🟧|🟥|·|||||||🟧|
-| **F11** |||||||🟧||||·|🟥||||🟧||
-| **F12** |||||||||||🟥|·||||||
-| **F13** |||||🟧|🟧|||||||·|🟧|||🟧|
-| **F14** |||||||||||||🟧|·|🟥|🟧||
-| **F15** ||||||||||||||🟥|·|🟨||
-| **F16** |||||||🟧||||🟧|||🟧|🟨|·||
-| **F17** ||||||🟧||||🟧|||🟧||||·|
+**Como ler:** cada linha é uma função e cada coluna é outra função. As colunas seguem a mesma ordem das linhas, de F01 a F17. Onde as duas se cruzam, a cor mostra o conflito de a mesma pessoa ter as duas funções. Célula vazia significa que não há regra, e o ponto (·) é a função cruzada com ela mesma. A tabela é espelhada, então cada par aparece duas vezes.
 
-🟥 **Crítico** (16 a 25): proibido, bloquear na solicitação · 
-🟧 **Alto** (10 a 15): exceção aprovada com controle compensatório · 
-🟨 **Médio** (5 a 9): permitido com controle documentado
+| ↓ Linha · Coluna → |F01|F02|F03|F04|F05|F06|F07|F08|F09|F10|F11|F12|F13|F14|F15|F16|F17|
+|---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| **F01** Cadastrar fornecedor |·|🟧|||🟧|🟥|🟥|||||||||||
+| **F02** Criar pedido de compra |🟧|·|🟥|🟧||||||||||||||
+| **F03** Aprovar pedido de compra ||🟥|·||🟨|||||||||||||
+| **F04** Registrar recebimento ||🟧||·|🟨|||||||||||||
+| **F05** Lançar fatura |🟧||🟨|🟨|·|🟥|🟧||||||🟧|||||
+| **F06** Aprovar pagamento |🟥||||🟥|·|🟥||||||🟧||||🟧|
+| **F07** Executar pagamento |🟥||||🟧|🟥|·|🟧|||🟧|||||🟧||
+| **F08** Cadastrar/alterar colaborador |||||||🟧|·|🟧|🟧||||||||
+| **F09** Processar folha ||||||||🟧|·|🟥||||||||
+| **F10** Aprovar folha ||||||||🟧|🟥|·|||||||🟧|
+| **F11** Lançar contábil manual |||||||🟧||||·|🟥||||🟧||
+| **F12** Aprovar lançamento contábil |||||||||||🟥|·||||||
+| **F13** Administrar ERP |||||🟧|🟧|||||||·|🟧|||🟧|
+| **F14** Desenvolver código |||||||||||||🟧|·|🟥|🟧||
+| **F15** Promover para produção ||||||||||||||🟥|·|🟨||
+| **F16** Administrar banco de dados |||||||🟧||||🟧|||🟧|🟨|·||
+| **F17** Gerenciar acessos ||||||🟧||||🟧|||🟧||||·|
+
+🟥 **Crítico** (16 a 25): proibido, bloquear na solicitação · 🟧 **Alto** (10 a 15): exceção aprovada com controle compensatório · 🟨 **Médio** (5 a 9): permitido com controle documentado
+
+**Exemplo:** na linha **F06 Aprovar pagamento**, a coluna **F07** está 🟥. Quem aprova e também executa o mesmo pagamento controla o processo inteiro, então a combinação é proibida.
 
 ### Funções
 
