@@ -30,9 +30,31 @@ Modelo de matriz de Segregação de Funções (SoD) em planilha, com **dados, es
 | **F16** |||||||🟧||||🟧|||🟧|🟨|·||
 | **F17** ||||||🟧||||🟧|||🟧||||·|
 
-🟥 **Crítico** (16 a 25): proibido, bloquear na solicitação · 🟧 **Alto** (10 a 15): exceção aprovada com controle compensatório · 🟨 **Médio** (5 a 9): permitido com controle documentado
+🟥 **Crítico** (16 a 25): proibido, bloquear na solicitação · 
+🟧 **Alto** (10 a 15): exceção aprovada com controle compensatório · 
+🟨 **Médio** (5 a 9): permitido com controle documentado
 
-**Funções:** F01 Cadastrar fornecedor · F02 Criar pedido de compra · F03 Aprovar pedido de compra · F04 Registrar recebimento · F05 Lançar fatura · F06 Aprovar pagamento · F07 Executar pagamento · F08 Cadastrar/alterar colaborador · F09 Processar folha · F10 Aprovar folha · F11 Lançar contábil manual · F12 Aprovar lançamento contábil · F13 Administrar ERP · F14 Desenvolver código · F15 Promover para produção · F16 Administrar banco de dados · F17 Gerenciar acessos
+### Funções
+
+| ID | Função | Processo |
+|---|---|---|
+| F01 | Cadastrar fornecedor | Compras e pagamentos |
+| F02 | Criar pedido de compra | Compras e pagamentos |
+| F03 | Aprovar pedido de compra | Compras e pagamentos |
+| F04 | Registrar recebimento | Compras e pagamentos |
+| F05 | Lançar fatura | Compras e pagamentos |
+| F06 | Aprovar pagamento | Compras e pagamentos |
+| F07 | Executar pagamento | Compras e pagamentos |
+| F08 | Cadastrar/alterar colaborador | Folha de pagamento |
+| F09 | Processar folha | Folha de pagamento |
+| F10 | Aprovar folha | Folha de pagamento |
+| F11 | Lançar contábil manual | Contabilidade |
+| F12 | Aprovar lançamento contábil | Contabilidade |
+| F13 | Administrar ERP | TI e segurança |
+| F14 | Desenvolver código | TI e segurança |
+| F15 | Promover para produção | TI e segurança |
+| F16 | Administrar banco de dados | TI e segurança |
+| F17 | Gerenciar acessos | TI e segurança |
 
 ## Risco = probabilidade × impacto
 
